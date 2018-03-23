@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="8Gj-5s-hpQ">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Parent View Controller-->
+        <scene sceneID="z31-9e-kld">
+            <objects>
+                <viewController storyboardIdentifier="ParentViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="8Gj-5s-hpQ" customClass="ParentViewController" customModule="DataPassing" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="hYw-oS-3YA">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="DsL-Gw-OKE">
+                                <rect key="frame" x="0.0" y="273.5" width="0.0" height="120.5"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hello" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KBK-Sc-eW3">
+                                        <rect key="frame" x="0.0" y="0.0" width="0.0" height="20.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter your child's name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="sdD-Nb-dLp">
+                                        <rect key="frame" x="0.0" y="40.5" width="0.0" height="30"/>
+                                        <nil key="textColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xaC-pE-p89">
+                                        <rect key="frame" x="0.0" y="90.5" width="0.0" height="30"/>
+                                        <state key="normal" title="Child"/>
+                                        <connections>
+                                            <action selector="buttonTapped:" destination="8Gj-5s-hpQ" eventType="touchUpInside" id="X9j-sX-lMF"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="DsL-Gw-OKE" firstAttribute="centerY" secondItem="hYw-oS-3YA" secondAttribute="centerY" id="20h-zh-tJL"/>
+                            <constraint firstItem="WEU-Mt-e8k" firstAttribute="trailing" secondItem="DsL-Gw-OKE" secondAttribute="trailing" constant="20" id="adD-m9-znh"/>
+                            <constraint firstItem="DsL-Gw-OKE" firstAttribute="leading" secondItem="WEU-Mt-e8k" secondAttribute="leading" constant="20" id="tWR-ZP-00t"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="WEU-Mt-e8k"/>
+                    </view>
+                    <connections>
+                        <outlet property="label" destination="KBK-Sc-eW3" id="5Sr-RX-PHc"/>
+                        <outlet property="textField" destination="sdD-Nb-dLp" id="tNa-UI-OVt"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Z0f-ku-Kji" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="416.80000000000001" y="-11.244377811094454"/>
+        </scene>
+        <!--Child View Controller-->
+        <scene sceneID="U9f-wE-jfL">
+            <objects>
+                <viewController storyboardIdentifier="ChildViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="FAz-Vk-P3w" customClass="ChildViewController" customModule="DataPassing" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8p2-xm-73v">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="Q1U-ws-i6e">
+                                <rect key="frame" x="0.0" y="273.5" width="0.0" height="120.5"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hello" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4j0-lG-nYO">
+                                        <rect key="frame" x="0.0" y="0.0" width="0.0" height="20.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter your parent's name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="1IO-ZH-s1d">
+                                        <rect key="frame" x="0.0" y="40.5" width="0.0" height="30"/>
+                                        <nil key="textColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BNE-jd-pcl">
+                                        <rect key="frame" x="0.0" y="90.5" width="0.0" height="30"/>
+                                        <state key="normal" title="Parent"/>
+                                        <connections>
+                                            <action selector="buttonTapped:" destination="FAz-Vk-P3w" eventType="touchUpInside" id="QXw-YS-IX9"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Q1U-ws-i6e" firstAttribute="leading" secondItem="J7M-v6-lM2" secondAttribute="leading" constant="20" id="Cos-hz-kMq"/>
+                            <constraint firstItem="Q1U-ws-i6e" firstAttribute="centerY" secondItem="8p2-xm-73v" secondAttribute="centerY" id="MYa-Sd-rOG"/>
+                            <constraint firstItem="J7M-v6-lM2" firstAttribute="trailing" secondItem="Q1U-ws-i6e" secondAttribute="trailing" constant="20" id="jCD-ra-vuC"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="J7M-v6-lM2"/>
+                    </view>
+                    <connections>
+                        <outlet property="label" destination="4j0-lG-nYO" id="CWp-uh-MpT"/>
+                        <outlet property="textField" destination="1IO-ZH-s1d" id="07R-uR-cR0"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="e9j-Vd-Vkw" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1340" y="-11"/>
+        </scene>
+    </scenes>
+</document>
